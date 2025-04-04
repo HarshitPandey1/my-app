@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { OfferService } from '../../../services/offer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-offers-slider-form',
@@ -12,7 +13,7 @@ import { OfferService } from '../../../services/offer.service';
 export class OffersSliderFormComponent {
   offerForm: FormGroup;
 
-  constructor(private fb: FormBuilder,private offerService: OfferService  ) {
+  constructor(private fb: FormBuilder,private offerService: OfferService,private router: Router  ) {
     this.offerForm = this.fb.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
@@ -27,6 +28,7 @@ export class OffersSliderFormComponent {
           console.log('Offer saved successfully:', response);
           alert('Offer submitted successfully!');
           this.offerForm.reset();
+          this.router.navigate(['/dashboard']);
         },
         error: (error) => {
           console.error('Error saving offer:', error);

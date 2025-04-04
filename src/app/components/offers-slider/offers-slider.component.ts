@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { OffersSliderCardComponent } from './offers-slider-card/offers-slider-card.component';
 import { CommonModule } from '@angular/common';
 import { OfferService } from '../../services/offer.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-offers-slider',
-  imports: [OffersSliderCardComponent,CommonModule],
+  imports: [RouterLink,OffersSliderCardComponent,CommonModule],
   templateUrl: './offers-slider.component.html',
   styleUrl: './offers-slider.component.css'
 })

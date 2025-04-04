@@ -1,7 +1,16 @@
 <div class="offers-container">
+    <!-- Add Button at Top Right -->
+    <button class="add-btn" [routerLink]="'/offer-form'">Add</button>
+
+
+    <!-- Left Navigation Button -->
     <button class="prev-btn" (click)="prevSlide()">&#10094;</button>
+
+    <!-- Offers Slider -->
     <div class="offers-slider">
         <app-offers-slider-card *ngFor="let offer of offers" [offer]="offer"></app-offers-slider-card>
     </div>
+
+    <!-- Right Navigation Button -->
     <button class="next-btn" (click)="nextSlide()">&#10095;</button>
 </div>
