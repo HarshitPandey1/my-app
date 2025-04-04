@@ -1,0 +1,21 @@
+<div class="bus-slider-container">
+    <!-- Left Navigation Button -->
+    <div class="navigation-container left-nav" (click)="scrollLeft()">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+
+    <!-- Bus Cards Container -->
+    <div #busSlider class="bus-slider">
+        <div 
+            class="bus-card"
+            *ngFor="let bus of buses; trackBy: trackBus"
+        >
+            <app-government-buses-slider-card [bus]="bus"></app-government-buses-slider-card>
+        </div>
+    </div>
+
+    <!-- Right Navigation Button -->
+    <div class="navigation-container right-nav" (click)="scrollRight()">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+</div>

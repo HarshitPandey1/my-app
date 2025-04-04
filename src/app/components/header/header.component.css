@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white; /* White background */
+  padding: 20px 40px;
+  height: 80px; /* Larger height for the navbar */
+  color: #B22222; /* Red color for text */
+  border-bottom: 2px solid #B22222;
+}
+
+/* Logo Section */
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo i {
+  font-size: 28px;
+  margin-right: 10px;
+  color: #B22222; /* Red icon color */
+}
+
+.navbar .logo span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #B22222; /* Red color for the text */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: auto; /* Align nav links to the right */
+  margin-right: 40px; /* Add some space on the right */
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #B22222; /* Red color for links */
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.nav-links a:hover {
+  color: #FF6347; /* Tomato red color on hover */
+}
+
+/* Profile Icon */
+.profile {
+  margin-right: 20px;
+  position: relative; /* Ensures the popup menu is positioned relative to this element */
+}
+
+.profile i {
+  font-size: 32px;
+  color: #B22222; /* Red profile icon color */
+  cursor: pointer;
+}
+
+/* Popup Menu Styling */
+.popup-menu {
+  position: absolute;
+  top: 60px; /* Adjust this value to position the popup below the profile icon */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Stronger box-shadow */
+  display: none; /* Initially hidden */
+  width: 160px; /* Set a thinner width for the popup */
+  border-radius: 8px; /* Subtle rounded corners */
+  z-index: 9999; /* Ensure the popup appears above other elements */
+}
+
+.popup-menu ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.popup-menu ul li {
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.popup-menu ul li a {
+  text-decoration: none;
+  color: #B22222; /* Red color for links */
+  font-size: 14px;
+  display: block;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover effects for popup items */
+.popup-menu ul li:hover {
+  background-color: #f5f5f5; /* Light gray background on hover */
+}
+
+.popup-menu ul li a:hover {
+  color: #FF6347; /* Tomato red color on hover */
+}
+
+/* Show the popup when isPopupVisible is true */
+.popup-menu.show {
+  display: block;
+}
+
+/* Ensure the navbar remains responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    margin-left: 0;
+    justify-content: center; /* Center nav links on smaller screens */
+  }
+
+  .navbar {
+    padding: 10px 20px; /* Reduce padding on smaller screens */
+    height: auto;
+  }
+}

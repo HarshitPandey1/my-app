@@ -1,0 +1,44 @@
+/* Bus Card Container */
+.bus-card {
+    width: 280px;
+    background: rgb(244, 234, 234);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Bus Name */
+  .bus-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Route & Fare Text */
+  .bus-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Hover Effect */
+  .bus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .bus-card {
+      width: 100%;
+    }
+  }
+  

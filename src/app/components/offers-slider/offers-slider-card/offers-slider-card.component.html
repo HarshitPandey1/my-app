@@ -1,0 +1,7 @@
+<div class="offer-card">
+    <img src="https://cdn3.vectorstock.com/i/1000x1000/50/42/deal-day-symbol-special-offer-price-sign-vector-25615042.jpg" alt="Offer Image">
+    <h3>{{ offer.title }}</h3>
+    <p>{{ offer.description }}</p>
+    <p class="promo-code">Use Promo: <strong>{{ offer.promoCode }}</strong></p>
+    <p class="validity">Valid Till: {{ offer.validTill | date }}</p>
+</div>

@@ -1,0 +1,19 @@
+{
+  "offers": [
+    
+    {
+      "id": "d0cc",
+      "title": "Get 50% off on all products in our store. Limited time offer!",
+      "description": "sdf",
+      "validTill": "2025-05-02"
+    }
+  ],
+  "government-buses": [
+    {
+      "id": "1",
+      "title": "New tax regulations",
+      "description": "The government has announced new tax regulations that will come into effect from next month.",
+      "validUntil": "2023-11-30"
+    }
+  ]
+}

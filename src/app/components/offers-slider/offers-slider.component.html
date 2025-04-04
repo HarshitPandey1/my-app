@@ -1,0 +1,7 @@
+<div class="offers-container">
+    <button class="prev-btn" (click)="prevSlide()">&#10094;</button>
+    <div class="offers-slider">
+        <app-offers-slider-card *ngFor="let offer of offers" [offer]="offer"></app-offers-slider-card>
+    </div>
+    <button class="next-btn" (click)="nextSlide()">&#10095;</button>
+</div>

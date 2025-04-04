@@ -1,0 +1,78 @@
+/* Full Slider Container */
+.bus-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240, 226, 226);
+  }
+  
+  /* Bus Cards Wrapper */
+  .bus-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: 80%;
+    padding: 10px;
+    scrollbar-width: none; /* Hide scrollbar for modern browsers */
+  }
+  
+  /* Hide Scrollbar for Webkit Browsers */
+  .bus-slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Navigation Buttons */
+  .navigation-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+  }
+  
+  /* Left and Right Arrow Positions */
+  .left-nav {
+    left: 10px;
+  }
+  
+  .right-nav {
+    right: 10px;
+  }
+  
+  /* Hover Effect */
+  .navigation-container:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Icons */
+  .navigation-container i {
+    font-size: 18px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .bus-slider {
+      width: 95%;
+    }
+  
+    .navigation-container {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  

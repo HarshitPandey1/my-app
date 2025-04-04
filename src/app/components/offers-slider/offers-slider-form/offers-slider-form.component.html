@@ -1,0 +1,15 @@
+<form [formGroup]="offerForm" (ngSubmit)="submitOffer()">
+    <label>Offer Title</label>
+    <input type="text" formControlName="title" placeholder="Enter Offer Title" />
+
+    <label>Offer Description</label>
+    <textarea formControlName="description" placeholder="Enter Offer Description"></textarea>
+
+    <label>Promo Code</label>
+    <input type="text" formControlName="promoCode" placeholder="Enter Promo Code" />
+
+    <label>Valid Till</label>
+    <input type="date" formControlName="validTill" />
+
+    <button type="submit" [disabled]="offerForm.invalid">Submit Offer</button>
+</form>

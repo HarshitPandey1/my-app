@@ -1,0 +1,93 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Big Container with Background Image */
+.big-container {
+    width: 100%;
+    height: 80vh;
+    background: url('https://s3.rdbuz.com/images/webplatform/india/Homepage%20header-03%202.webp') 
+        no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Form Section */
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 12px 12px 12px 12px rgba(22, 21, 21, 0.2);
+    gap: 15px;
+}
+
+/* Form Input Fields */
+.form-group {
+    width: 25%;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Date Input Styling */
+.form-group input[type="date"] {
+    font-family: inherit;
+    color: #333;
+}
+
+/* Focus Effect */
+.form-group input:focus {
+    border-color: #B22222;
+}
+
+/* Search Button */
+.search-btn {
+    padding: 18px 40px;
+    background-color: #bfddd6;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Hover Effect */
+.search-btn:hover {
+    background-color: #FF6347;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-section {
+        flex-direction: column;
+        width: 90%;
+        padding: 25px;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+}
