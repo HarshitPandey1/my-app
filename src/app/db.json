@@ -23,48 +23,6 @@
       "title": "Get 50% off on all products in our store. Limited time offer!",
       "description": "sdf",
       "validTill": "2025-05-02"
-    },
-    {
-      "id": "d0cc",
-      "title": "Get 50% off on all products in our store. Limited time offer!",
-      "description": "sdf",
-      "validTill": "2025-05-02"
-    },
-    {
-      "id": "d0cc",
-      "title": "Get 50% off on all products in our store. Limited time offer!",
-      "description": "sdf",
-      "validTill": "2025-05-02"
-    },
-    {
-      "id": "d0cc",
-      "title": "Get 50% off on all products in our store. Limited time offer!",
-      "description": "sdf",
-      "validTill": "2025-05-02"
-    },
-    {
-      "id": "d0cc",
-      "title": "Get 50% off on all products in our store. Limited time offer!",
-      "description": "sdf",
-      "validTill": "2025-05-02"
-    },
-    {
-      "id": "d0cc",
-      "title": "Get 50% off on all products in our store. Limited time offer!",
-      "description": "sdf",
-      "validTill": "2025-05-02"
-    },
-    {
-      "id": "d0cc",
-      "title": "Get 50% off on all products in our store. Limited time offer!",
-      "description": "sdf",
-      "validTill": "2025-05-02"
-    },
-    {
-      "id": "c408",
-      "title": "r",
-      "description": "wert",
-      "validTill": "2025-04-11"
     }
   ],
   "government-buses": [
@@ -73,6 +31,32 @@
       "title": "New tax regulations",
       "description": "The government has announced new tax regulations that will come into effect from next month.",
       "validUntil": "2023-11-30"
+    }
+  ],
+  "users": [
+    {
+      "username": "",
+      "email": "",
+      "password": "",
+      "id": "a1d9"
+    },
+    {
+      "id": "3e38",
+      "username": "qazxsw",
+      "email": "qaxsw2@QW",
+      "password": "FASDDAFFASD"
+    },
+    {
+      "id": "401e",
+      "username": "Harshit",
+      "email": "harshit@gmail.com",
+      "password": "harshit123"
+    },
+    {
+      "id": "39dc",
+      "username": "user",
+      "email": "user@gmail.com",
+      "password": "user123"
     }
   ]
 }

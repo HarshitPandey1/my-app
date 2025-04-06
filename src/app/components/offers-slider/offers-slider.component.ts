@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { OffersSliderCardComponent } from './offers-slider-card/offers-slider-card.component';
 import { CommonModule } from '@angular/common';
-import { OfferService } from '../../services/offer.service';
+import { OfferService } from '../../services/offer-service/offer.service';
 import { RouterLink } from '@angular/router';
 
 @Component({

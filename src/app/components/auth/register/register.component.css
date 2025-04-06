@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://www.mistay.in/travel-blog/content/images/2020/07/travel-4813658_1920.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .register-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .register-form {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .register-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .form-group input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff;
+  }
+  
+  small {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .register-btn {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: #b22222;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .register-btn:disabled {
+    background-color: #b22222;
+    cursor: not-allowed;
+  }
+  
+  .register-btn:hover:not(:disabled) {
+    background-color: #ff6347;
+  }
+  
+  .register-btn .arrow {
+    display: inline-block;
+    margin-left: 10px;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  }
+  
+  .register-btn .arrow.animate-out {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  
+  /* Error message box like in login */
+  .register-error {
+    background-color: #ffe0e0;
+    color: #a94442;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .register-error a {
+    cursor: pointer;
+    color: #007bff;
+    margin-left: 5px;
+  }
+  
+  .register-error a:hover {
+    text-decoration: underline;
+  }
+  
