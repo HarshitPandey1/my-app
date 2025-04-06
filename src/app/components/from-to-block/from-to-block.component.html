@@ -1,24 +1,27 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+
 <div class="big-container">
   <div class="form-section">
 
     <div class="form-group">
       <label for="from"><i class="fas fa-map-marker-alt"></i> From</label>
-      <input type="text" id="from" placeholder="Enter departure location" />
+      <input type="text" id="from" #fromInput placeholder="Enter departure location" />
     </div>
 
     <div class="form-group">
       <label for="to"><i class="fas fa-map-marker-alt"></i> To</label>
-      <input type="text" id="to" placeholder="Enter destination" />
+      <input type="text" id="to" #toInput placeholder="Enter destination" />
     </div>
 
     <div class="form-group">
       <label for="date"><i class="fas fa-calendar-alt"></i> Date</label>
-      <input type="date" id="date" />
+      <input type="date" id="date" #dateInput />
     </div>
 
-    <button class="search-btn" [routerLink]="['/available-bus']"><i class="fas fa-search"></i> Search</button>
+    <button class="search-btn" (click)="searchBuses(fromInput.value, toInput.value, dateInput.value)">
+      <i class="fas fa-search"></i> Search
+    </button>
 
   </div>
 </div>

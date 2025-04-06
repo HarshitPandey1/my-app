@@ -1,26 +1,39 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe, JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { AvailableBusCardComponent } from './available-bus-card/available-bus-card.component';
+
 
 @Component({
   selector: 'app-available-bus',
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule,RouterLink,AvailableBusCardComponent,DatePipe,JsonPipe],
   templateUrl: './available-bus.component.html',
   styleUrl: './available-bus.component.css'
 })
-export class AvailableBusComponent {
+export class AvailableBusComponent implements OnInit {
   buses: any[] = [];
-  expandedIndex: number | null = null;
+  filteredBuses: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('http://localhost:3001/buses').subscribe(data => {
-      this.buses = data;
+    this.route.queryParams.subscribe(params => {
+      const from = (params['from'] || '').toLowerCase();
+      const to = (params['to'] || '').toLowerCase();
+      const date = params['date'];
+
+      this.http.get<any[]>('http://localhost:3001/buses').subscribe(data => {
+        this.buses = data;
+
+        this.filteredBuses = this.buses.filter(bus => {
+          const matchesFrom = from ? bus.from.toLowerCase().includes(from) : true;
+          const matchesTo = to ? bus.to.toLowerCase().includes(to) : true;
+          const matchesDate = date ? bus.departure.startsWith(date) : true;
+
+          return matchesFrom && matchesTo && matchesDate;
+        });
+      });
     });
-  }
-  toggleExpand(index: number): void {
-    this.expandedIndex = this.expandedIndex === index ? null : index;
   }
 }

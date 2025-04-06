@@ -1,36 +1,44 @@
 .bus-list-container {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 1rem;
-    overflow-y: auto;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(20, 20, 20, 0.6)),
+                url('https://images.unsplash.com/photo-1586943358475-3e24c1a416e7?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
   .bus-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
+    background-color: #ffffffee;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    width: 90%;
+    max-width: 800px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
   
     &:hover {
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      transform: scale(1.01);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
     }
   }
   
   .bus-main {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    padding: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
   }
   
   .left img {
-    width: 100px;
-    height: 70px;
+    width: 110px;
+    height: 75px;
+    border-radius: 10px;
     object-fit: cover;
-    border-radius: 8px;
+    flex-shrink: 0;
   }
   
   .center {
@@ -39,7 +47,13 @@
   
   .center h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    color: #2c3e50;
+  }
+  
+  .center p {
+    margin: 2px 0;
+    color: #555;
   }
   
   .right {
@@ -47,22 +61,31 @@
     min-width: 100px;
   }
   
-  .price {
-    font-size: 1.2rem;
-    color: #27ae60;
+  .right .price {
+    font-size: 1.3rem;
     font-weight: bold;
+    color: #27ae60;
   }
   
-  .type {
+  .right .type {
     font-size: 0.9rem;
     color: #888;
   }
   
+  /* Smooth toggle effect */
   .bus-extra {
-    margin-top: 0.8rem;
-    border-top: 1px solid #eee;
-    padding-top: 0.8rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1rem;
+    background: #f9f9f9;
     font-size: 0.95rem;
-    color: #444;
+    color: #333;
+    border-top: 1px solid #ddd;
+  }
+  
+  .bus-card.expanded .bus-extra {
+    max-height: 200px;
+    padding: 1rem;
   }
   

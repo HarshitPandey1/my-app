@@ -1,24 +1,23 @@
 <div class="bus-card">
-    <div class="card-top">
-      <img [src]="bus.busImage" alt="Bus Image" />
-  
-      <div class="bus-details">
-        <h3>{{ bus.busCompany }} - {{ bus.busNumber }}</h3>
-        <p><strong>From:</strong> {{ bus.from }}</p>
-        <p><strong>To:</strong> {{ bus.to }}</p>
-        <p><strong>Departure:</strong> {{ bus.departure | date: 'shortTime' }}</p>
-        <p><strong>Arrival:</strong> {{ bus.arrival | date: 'shortTime' }}</p>
-      </div>
-  
-      <div class="price-section">
-        <p class="price">₹{{ bus.price }}</p>
-        <p class="bus-type">{{ bus.busType }}</p>
-      </div>
+  <div class="card-top">
+    <img [src]="bus.busImage" alt="Bus Image" />
+
+    <div class="bus-details">
+      <h3>{{ bus.busCompany }} - {{ bus.busNumber }}</h3>
+      <p><strong>From:</strong> {{ bus.from }}</p>
+      <p><strong>To:</strong> {{ bus.to }}</p>
+      <p><strong>Departure:</strong> {{ bus.departure | date: 'shortTime' }}</p>
+      <p><strong>Arrival:</strong> {{ bus.arrival | date: 'shortTime' }}</p>
     </div>
-  
-    <div class="card-bottom">
-      <p><strong>Seats Available:</strong> {{ bus.availableSeats }} / {{ bus.totalSeats }}</p>
-      <p><strong>Description:</strong> {{ bus.busDescription }}</p>
+
+    <div class="price-section">
+      <p class="price">₹{{ bus.price }}</p>
+      <p class="bus-type">{{ bus.busType }}</p>
     </div>
   </div>
-  
+
+  <div class="card-bottom">
+    <p><strong>Seats Available:</strong> {{ bus.availableSeats }} / {{ bus.totalSeats }}</p>
+    <p><strong>Description:</strong> {{ bus.busDescription }}</p>
+  </div>
+</div>

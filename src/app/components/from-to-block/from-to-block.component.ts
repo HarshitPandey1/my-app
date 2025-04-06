@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-from-to-block',
@@ -8,5 +8,15 @@ import { RouterLink } from '@angular/router';
   styleUrl: './from-to-block.component.css'
 })
 export class FromToBlockComponent {
+  constructor(private router: Router) {}
 
+  searchBuses(from: string, to: string, date: string) {
+    this.router.navigate(['/available-bus'], {
+      queryParams: {
+        from,
+        to,
+        date
+      }
+    });
+  }
 }
