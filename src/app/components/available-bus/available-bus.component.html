@@ -1,0 +1,30 @@
+<div class="bus-list-container">
+    <div
+      class="bus-card"
+      *ngFor="let bus of buses; let i = index"
+      (click)="toggleExpand(i)"
+      [class.expanded]="expandedIndex === i"
+    >
+      <div class="bus-main">
+        <div class="left">
+          <img [src]="bus.busImage" alt="Bus Image" />
+        </div>
+        <div class="center">
+          <h3>{{ bus.busCompany }} - {{ bus.busNumber }}</h3>
+          <p>{{ bus.from }} → {{ bus.to }}</p>
+          <p>{{ bus.departure | date: 'shortTime' }} - {{ bus.arrival | date: 'shortTime' }}</p>
+        </div>
+        <div class="right">
+          <p class="price">₹{{ bus.price }}</p>
+          <p class="type">{{ bus.busType }}</p>
+        </div>
+      </div>
+  
+      <div class="bus-extra" *ngIf="expandedIndex === i">
+        <p><strong>Total Seats:</strong> {{ bus.totalSeats }}</p>
+        <p><strong>Available Seats:</strong> {{ bus.availableSeats }}</p>
+        <p><strong>Description:</strong> {{ bus.busDescription }}</p>
+      </div>
+    </div>
+  </div>
+  

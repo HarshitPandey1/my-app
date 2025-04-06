@@ -1,0 +1,70 @@
+/* Fullscreen background */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://images.unsplash.com/photo-1607082349566-187342175e2c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Container to center content */
+  .about-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Card style */
+  .about-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    color: #333;
+  }
+  
+  h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    color: #444;
+  }
+  
+  ul {
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul i {
+    color: #28a745;
+    margin-right: 8px;
+  }
+  
+  .thankyou {
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #e63946;
+  }
+  

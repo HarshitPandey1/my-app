@@ -1,11 +1,9 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Big Container with Background Image */
 .big-container {
     width: 100%;
     height: 80vh;
@@ -18,7 +16,6 @@
     padding: 40px;
 }
 
-/* Form Section */
 .form-section {
     display: flex;
     justify-content: space-between;
@@ -30,7 +27,6 @@
     gap: 15px;
 }
 
-/* Form Input Fields */
 .form-group {
     width: 25%;
 }
@@ -45,18 +41,14 @@
     transition: border-color 0.3s ease;
 }
 
-/* Date Input Styling */
 .form-group input[type="date"] {
     font-family: inherit;
-    color: #333;
+    color: #050404;
 }
 
-/* Focus Effect */
 .form-group input:focus {
     border-color: #B22222;
 }
-
-/* Search Button */
 .search-btn {
     padding: 18px 40px;
     background-color: #bfddd6;
@@ -69,12 +61,10 @@
     white-space: nowrap;
 }
 
-/* Hover Effect */
 .search-btn:hover {
     background-color: #FF6347;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .form-section {
         flex-direction: column;

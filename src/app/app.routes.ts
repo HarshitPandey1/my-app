@@ -7,7 +7,9 @@ import { OffersSliderCardComponent } from './components/offers-slider/offers-sli
 import { OffersSliderFormComponent } from './components/offers-slider/offers-slider-form/offers-slider-form.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { LoginComponent } from './components/auth/login/login.component';
-
+import { ContactComponent } from './components/contact/contact/contact.component';
+import { AboutComponent } from './components/about/about/about.component';
+import { AvailableBusComponent } from './components/available-bus/available-bus.component';
 export const routes: Routes = [
     {
         path: 'header', component: HeaderComponent
@@ -29,6 +31,15 @@ export const routes: Routes = [
     },
     {
         path:'login',component:LoginComponent
+    },
+    {
+        path:'contact',component:ContactComponent
+    },
+    {
+        path:'about',component:AboutComponent
+    },
+    {
+        path:'available-bus',component:AvailableBusComponent
     },
     {
         path: '', component: DashboardComponent
