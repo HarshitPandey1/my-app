@@ -1,7 +1,7 @@
 /* Bus Card Container */
 .bus-card {
     width: 280px;
-    background: rgb(244, 234, 234);
+    
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
