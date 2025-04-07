@@ -4,24 +4,56 @@
 <div class="big-container">
   <div class="form-section">
 
-    <div class="form-group">
+    <!-- FROM -->
+    <div class="form-group" style="position: relative;">
       <label for="from"><i class="fas fa-map-marker-alt"></i> From</label>
-      <input type="text" id="from" #fromInput placeholder="Enter departure location" />
+      <input
+        type="text"
+        id="from"
+        #fromInput
+        (input)="filterFrom(fromInput.value)"
+        placeholder="Enter departure location"
+        autocomplete="off"
+      />
+      <ul class="suggestions" *ngIf="filteredFromOptions.length > 0">
+        <li *ngFor="let option of filteredFromOptions" (click)="selectFrom(option, fromInput)">
+          {{ option }}
+        </li>
+      </ul>
     </div>
 
-    <div class="form-group">
+    <!-- TO -->
+    <div class="form-group" style="position: relative;">
       <label for="to"><i class="fas fa-map-marker-alt"></i> To</label>
-      <input type="text" id="to" #toInput placeholder="Enter destination" />
+      <input
+        type="text"
+        id="to"
+        #toInput
+        (input)="filterTo(toInput.value)"
+        placeholder="Enter destination"
+        autocomplete="off"
+      />
+      <ul class="suggestions" *ngIf="filteredToOptions.length > 0">
+        <li *ngFor="let option of filteredToOptions" (click)="selectTo(option, toInput)">
+          {{ option }}
+        </li>
+      </ul>
     </div>
 
+    <!-- DATE -->
     <div class="form-group">
       <label for="date"><i class="fas fa-calendar-alt"></i> Date</label>
       <input type="date" id="date" #dateInput />
     </div>
 
-    <button class="search-btn" (click)="searchBuses(fromInput.value, toInput.value, dateInput.value)">
+    <!-- SEARCH -->
+    <button
+      class="search-btn"
+      (click)="searchBuses(fromInput.value, toInput.value, dateInput.value)">
       <i class="fas fa-search"></i> Search
     </button>
 
   </div>
 </div>
+
+

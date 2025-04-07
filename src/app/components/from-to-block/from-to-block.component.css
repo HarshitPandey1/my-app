@@ -81,3 +81,26 @@
         width: 100%;
     }
 }
+.suggestions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    z-index: 1000;
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 4px;
+  }
+  
+  .suggestions li {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .suggestions li:hover {
+    background-color: #f0f0f0;
+  }
+  
