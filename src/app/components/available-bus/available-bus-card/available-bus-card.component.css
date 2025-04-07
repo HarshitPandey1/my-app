@@ -1,72 +1,59 @@
 .bus-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 16px;
-  transition: transform 0.2s ease-in-out;
+  width: 50vw;
+  min-width: 500px;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #ffffff, #f4f4f4);
+  cursor: pointer;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease;
+  max-height: 130px;
+  display: flex;
+  flex-direction: column;
+}
 
-  &:hover {
-    transform: translateY(-4px);
-  }
+.bus-card.expanded {
+  max-height: 350px;
+  padding-bottom: 1.5rem;
+}
 
-  .card-top {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
+.card-top {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
 
-    img {
-      width: 120px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
+.bus-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
-    .bus-details {
-      flex-grow: 1;
-      min-width: 200px;
+.details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-      h3 {
-        margin: 0;
-        font-size: 1.2rem;
-        color: #333;
-      }
+.route h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
 
-      p {
-        margin: 4px 0;
-        font-size: 0.95rem;
-        color: #555;
-      }
-    }
+.route p,
+.info p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
 
-    .price-section {
-      text-align: right;
-      min-width: 100px;
-
-      .price {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #2196f3;
-        margin: 0;
-      }
-
-      .bus-type {
-        font-size: 0.9rem;
-        color: #777;
-      }
-    }
-  }
-
-  .card-bottom {
-    border-top: 1px solid #eee;
-    margin-top: 12px;
-    padding-top: 12px;
-
-    p {
-      margin: 4px 0;
-      font-size: 0.9rem;
-      color: #444;
-    }
-  }
+.card-bottom {
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-top: 0.75rem;
+  font-size: 0.9rem;
+  transition: opacity 0.6s ease;
 }

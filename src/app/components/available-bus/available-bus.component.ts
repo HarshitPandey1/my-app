@@ -3,11 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { AvailableBusCardComponent } from './available-bus-card/available-bus-card.component';
+import { FromToBlockComponent } from '../from-to-block/from-to-block.component';
+import { HeaderComponent } from '../header/header.component';
 
 
 @Component({
   selector: 'app-available-bus',
-  imports: [CommonModule,RouterLink,AvailableBusCardComponent,DatePipe,JsonPipe],
+  imports: [CommonModule,RouterLink,AvailableBusCardComponent,DatePipe,JsonPipe,FromToBlockComponent,HeaderComponent],
   templateUrl: './available-bus.component.html',
   styleUrl: './available-bus.component.css'
 })
@@ -35,5 +37,10 @@ export class AvailableBusComponent implements OnInit {
         });
       });
     });
+  }
+  expandedIndex: number | null = null;
+
+  toggleExpand(index: number): void {
+    this.expandedIndex = this.expandedIndex === index ? null : index;
   }
 }

@@ -1,23 +1,23 @@
-<div class="bus-card">
+<div class="bus-card" [class.expanded]="expanded">
   <div class="card-top">
-    <img [src]="bus.busImage" alt="Bus Image" />
-
-    <div class="bus-details">
-      <h3>{{ bus.busCompany }} - {{ bus.busNumber }}</h3>
-      <p><strong>From:</strong> {{ bus.from }}</p>
-      <p><strong>To:</strong> {{ bus.to }}</p>
-      <p><strong>Departure:</strong> {{ bus.departure | date: 'shortTime' }}</p>
-      <p><strong>Arrival:</strong> {{ bus.arrival | date: 'shortTime' }}</p>
-    </div>
-
-    <div class="price-section">
-      <p class="price">₹{{ bus.price }}</p>
-      <p class="bus-type">{{ bus.busType }}</p>
+    <img [src]="bus.busImage" alt="Bus Image" class="bus-img" />
+    
+    <div class="details">
+      <div class="route">
+        <h3>{{ bus.from }} → {{ bus.to }}</h3>
+        <p>{{ bus.departure | date: 'shortTime' }} - {{ bus.arrival | date: 'shortTime' }}</p>
+      </div>
+      <div class="info">
+        <p><strong>Company:</strong> {{ bus.busCompany }}</p>
+        <p><strong>Price:</strong> ₹{{ bus.price }}</p>
+      </div>
     </div>
   </div>
 
-  <div class="card-bottom">
-    <p><strong>Seats Available:</strong> {{ bus.availableSeats }} / {{ bus.totalSeats }}</p>
+  <div class="card-bottom" *ngIf="expanded">
+    <p><strong>Bus No:</strong> {{ bus.busNumber }}</p>
+    <p><strong>Seats:</strong> {{ bus.availableSeats }} / {{ bus.totalSeats }}</p>
+    <p><strong>Type:</strong> {{ bus.busType }}</p>
     <p><strong>Description:</strong> {{ bus.busDescription }}</p>
   </div>
 </div>
