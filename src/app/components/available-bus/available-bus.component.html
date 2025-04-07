@@ -1,7 +1,9 @@
 <app-header></app-header>
 <app-from-to-block></app-from-to-block>
 <div class="bus-list-container">
-
+  <div *ngIf="filteredBuses.length === 0" class="no-bus-message">
+    No buses for the given route. Try some other route.
+  </div>
   <div *ngFor="let bus of filteredBuses; let i = index" (click)="toggleExpand(i)">
     <app-available-bus-card
       [bus]="bus"
