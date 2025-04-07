@@ -86,4 +86,20 @@
     max-height: 200px;
     padding: 1rem;
   }
+
+  
+  .no-bus-message {
+    margin-top: 3rem;
+    padding: 1.5rem 2rem;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
   

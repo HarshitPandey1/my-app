@@ -42,6 +42,6 @@ export const routes: Routes = [
         path:'available-bus',component:AvailableBusComponent
     },
     {
-        path: '', component: DashboardComponent
+        path: '', component: RegisterComponent
     }
 ];
