@@ -43,4 +43,8 @@ export class AvailableBusComponent implements OnInit {
   toggleExpand(index: number): void {
     this.expandedIndex = this.expandedIndex === index ? null : index;
   }
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
 }
