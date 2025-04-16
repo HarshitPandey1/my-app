@@ -7,7 +7,6 @@ export interface Profile {
   name: string;
   email: string;
   location: string;
-  role: string;
   skills: string;
   image: string;
   photoUrl: string;

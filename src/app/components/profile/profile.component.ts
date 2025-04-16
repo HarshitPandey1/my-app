@@ -20,28 +20,25 @@ export class ProfileComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const userId = localStorage.getItem('userId'); // ✅ Get userId from storage
+    const userId = localStorage.getItem('userId');
   
     if (userId) {
       this.profileService.getProfileByUserId(userId).subscribe((profiles: any[]) => {
-        const profile = profiles[0]; // JSON server returns an array with one match
+        const profile = profiles[0] 
   
         if (profile) {
           this.profileData = profile;
   
-          // Initialize the form with fetched data
           this.profileForm = this.fb.group({
             name: [profile.name],
             email: [profile.email],
             location: [profile.location],
             skills: [profile.skills],
-            role: [profile.role],
             photoUrl: [profile.photoUrl],
           });
   
-          this.calculateCompletion(); // Initial profile score
+          this.calculateCompletion();
   
-          // Watch for changes to update score
           this.profileForm.valueChanges.subscribe(() => {
             this.calculateCompletion();
           });
@@ -74,7 +71,7 @@ export class ProfileComponent implements OnInit {
       reader.onload = () => {
         const base64Image = reader.result as string;
         this.profileForm.patchValue({ photoUrl: base64Image });
-        this.calculateCompletion(); // update profile score after image update
+        this.calculateCompletion(); 
       };
 
       reader.readAsDataURL(file);
@@ -86,7 +83,7 @@ export class ProfileComponent implements OnInit {
     if (!userId) return;
   
     const updatedProfile: Profile = {
-      id: +userId,  // Make sure it's a number
+      id: localStorage.getItem('userId'),
       ...this.profileForm.value
     };
   
