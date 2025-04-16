@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { ContactFormService } from '../../../services/contact-form/contact-form.service';
+import { ContactFormService } from '../../services/contact-form/contact-form.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -29,4 +29,5 @@ export class ContactComponent {
       });
     }
   }
+
 }

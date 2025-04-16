@@ -29,17 +29,22 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       this.isClicked = true; // Start button animation
-
+  
       const { identifier, password } = this.loginForm.value;
-
+  
       this.userService.getUsers().subscribe(users => {
         const matchedUser = users.find((user: any) =>
           (user.username === identifier || user.email === identifier) && user.password === password
         );
-
+  
         if (matchedUser) {
           this.loginError = null;
-
+  
+          // ✅ Store user info in localStorage
+          localStorage.setItem('userId', matchedUser.id);
+          localStorage.setItem('userName', matchedUser.name);
+          localStorage.setItem('userEmail', matchedUser.email);
+  
           // Delay navigation to allow button animation
           setTimeout(() => {
             alert('Login successful!');
@@ -55,4 +60,5 @@ export class LoginComponent {
       this.loginForm.markAllAsTouched();
     }
   }
+  
 }

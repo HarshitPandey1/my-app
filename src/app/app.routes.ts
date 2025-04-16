@@ -7,9 +7,10 @@ import { OffersSliderCardComponent } from './components/offers-slider/offers-sli
 import { OffersSliderFormComponent } from './components/offers-slider/offers-slider-form/offers-slider-form.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { LoginComponent } from './components/auth/login/login.component';
-import { ContactComponent } from './components/contact/contact/contact.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about/about.component';
 import { AvailableBusComponent } from './components/available-bus/available-bus.component';
+import { ContactListComponent } from './components/contact/contact-list/contact-list.component';
 export const routes: Routes = [
     {
         path: 'header', component: HeaderComponent
@@ -42,6 +43,9 @@ export const routes: Routes = [
         path:'available-bus',component:AvailableBusComponent
     },
     {
-        path: '', component: DashboardComponent
+        path:'contact-list',component:ContactListComponent
+    },
+    {
+        path: '', component: RegisterComponent
     }
 ];
