@@ -48,6 +48,8 @@ export class FromToBlockComponent implements OnInit {
   }
 
   searchBuses(from: string, to: string, date: string) {
+    this.filteredToOptions = [];
+    this.filteredFromOptions = [];
     this.router.navigate(['/available-bus'], {
       queryParams: { from, to, date }
     });
