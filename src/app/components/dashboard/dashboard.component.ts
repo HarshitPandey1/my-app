@@ -8,7 +8,7 @@ import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterLink,HeaderComponent,FromToBlockComponent,OffersSliderComponent,GovernmentBusesSliderComponent,FooterComponent],
+  imports: [HeaderComponent,FromToBlockComponent,OffersSliderComponent,GovernmentBusesSliderComponent,FooterComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })

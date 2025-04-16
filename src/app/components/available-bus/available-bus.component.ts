@@ -9,7 +9,7 @@ import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-available-bus',
   standalone: true,
-  imports: [CommonModule, RouterLink, AvailableBusCardComponent, DatePipe, JsonPipe, FromToBlockComponent, HeaderComponent],
+  imports: [CommonModule, AvailableBusCardComponent, FromToBlockComponent, HeaderComponent],
   templateUrl: './available-bus.component.html',
   styleUrl: './available-bus.component.css'
 })

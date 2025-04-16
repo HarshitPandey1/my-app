@@ -21,9 +21,11 @@ export class HeaderComponent {
 
   // Handle logout functionality (you can implement your own logic)
   logout(): void {
-    console.log("Logging out...");
-    // Implement actual logout logic (e.g., clear session, token, etc.)
+    localStorage.removeItem('userId'); // Remove the stored ID
+    localStorage.removeItem('username'); // (Optional) If you're storing more user info
+    localStorage.clear(); // Optionally clear all local storage
   }
+  
 
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent): void {
