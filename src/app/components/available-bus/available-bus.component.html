@@ -1,15 +1,29 @@
 <app-header></app-header>
 <app-from-to-block></app-from-to-block>
+
+<div class="sort-container">
+  <label for="sort">Sort by:</label>
+  <select id="sort" (change)="onSortChange($event)">
+    <option value="">None</option>
+    <option value="fare-asc">Fare: Low to High</option>
+    <option value="fare-desc">Fare: High to Low</option>
+    <option value="time-asc">Departure: Early to Late</option>
+    <option value="time-desc">Departure: Late to Early</option>
+  </select>
+</div>
+
 <div class="bus-list-container">
-  <div *ngIf="filteredBuses.length === 0" class="no-bus-message">
+  <div *ngIf="sortedBuses.length === 0" class="no-bus-message">
     No buses for the given route. Try some other route.
   </div>
-  <div *ngFor="let bus of filteredBuses; let i = index" (click)="toggleExpand(i)">
+
+  <div *ngFor="let bus of sortedBuses; let i = index" (click)="toggleExpand(i)">
     <app-available-bus-card
       [bus]="bus"
       [expanded]="expandedIndex === i">
     </app-available-bus-card>
   </div>
+
   <button class="back-to-top" (click)="scrollToTop()">
     <i class="fas fa-arrow-up"></i>
   </button>

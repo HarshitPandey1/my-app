@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-from-to-block',
-  imports: [RouterLink],
+  imports: [RouterLink,CommonModule],
   templateUrl: './from-to-block.component.html',
   styleUrl: './from-to-block.component.css'
 })
