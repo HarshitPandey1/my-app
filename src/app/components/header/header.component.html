@@ -2,7 +2,7 @@
 <header class="navbar">
   <div class="logo">
     <i class="fas fa-bus"></i>
-    <span>BusBooking</span>
+    <span>BusBooking</span><span class="straight-bar"></span>
   </div>
   <nav>
     <ul class="nav-links">
@@ -15,8 +15,12 @@
 
   <!-- Profile Icon with click event -->
   <div class="profile" (click)="togglePopup()">
-    <i class="fas fa-user-circle"></i>
+    <img *ngIf="profilePhotoUrl; else defaultIcon" [src]="profilePhotoUrl" alt="Profile" class="profile-image-small" />
+    <ng-template #defaultIcon>
+      <i class="fas fa-user-circle"></i>
+    </ng-template>
   </div>
+  
 
   <!-- Popup Menu -->
   <div class="popup-menu" [ngClass]="{'show': isPopupVisible}">

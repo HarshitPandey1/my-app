@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, HostListener, ElementRef, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,15 +9,27 @@ import { RouterLink } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isPopupVisible: boolean = false;
+  profilePhotoUrl: string | null = null;
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef,private http: HttpClient) {}
 
   // Toggle the visibility of the pop-up menu
   togglePopup(): void {
     console.log('Toggling popup visibility');
     this.isPopupVisible = !this.isPopupVisible;
+  }
+  ngOnInit(): void {
+    const userId = localStorage.getItem('userId');
+
+    if (userId) {
+      this.http.get<any[]>(`http://localhost:3002/profile?userId=${userId}`).subscribe(profiles => {
+        if (profiles.length && profiles[0].photoUrl?.trim() !== '') {
+          this.profilePhotoUrl = profiles[0].photoUrl;
+        }
+      });
+    }
   }
 
   // Handle logout functionality (you can implement your own logic)

@@ -6,7 +6,7 @@
   "price": 3.29,
   "busNumber": "AI9365",
   "availableSeats": 1,
-  "totalSeats": 1,
+  "totalSeats": 5,
   "busType": "Callie",
   "busCompany": "Janaya",
   "busImage": "http://dummyimage.com/209x100.png/cc0000/ffffff",
