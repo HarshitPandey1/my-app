@@ -35,16 +35,10 @@
   ],
   "users": [
     {
-      "username": "",
-      "email": "",
-      "password": "",
-      "id": "a1d9"
-    },
-    {
-      "id": "705a",
-      "username": "Harshit",
-      "email": "harshit@gmail.com",
-      "password": "harshit123"
+      "id": "3b15",
+      "username": "user",
+      "email": "user@gmail.com",
+      "password": "user123"
     }
   ],
   "contacts": [

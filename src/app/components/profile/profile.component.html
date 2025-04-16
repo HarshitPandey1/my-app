@@ -1,6 +1,5 @@
 <div class="profile-container" *ngIf="profileData">
   <div class="profile-card">
-    <!-- Progress Bar -->
     <div class="progress-wrapper">
       <div class="progress-bar">
         <div class="progress-fill" [style.width.%]="profileCompletion"></div>
@@ -8,12 +7,10 @@
       <p class="progress-text">{{ profileCompletion }}% Profile Completed</p>
     </div>
 
-    <!-- Profile Image -->
     <div class="profile-image">
       <img [src]="profileForm.get('photoUrl')?.value" alt="Profile Picture" />
     </div>
 
-    <!-- Profile Details -->
     <div class="profile-details">
       <h2>{{ profileForm.get('name')?.value || 'Your Name' }}</h2>
       <p><strong>Email:</strong> {{ profileForm.get('email')?.value || '-' }}</p>
@@ -22,15 +19,11 @@
     </div>
   </div>
 
-  <!-- Profile Edit Form -->
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="profile-form">
-    <!-- File Upload -->
     <div class="form-group image-upload">
       <label for="photoUpload">Upload Profile Picture</label>
       <input type="file" id="photoUpload" (change)="onFileSelected($event)" accept="image/*">
     </div>
-
-    <!-- Other Fields -->
     <input formControlName="name" placeholder="Name">
     <input formControlName="email" placeholder="Email">
     <input formControlName="location" placeholder="Location">

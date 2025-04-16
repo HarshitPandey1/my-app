@@ -16,12 +16,12 @@ export class UserService {
       switchMap((createdUser: any) => {
         // Store user info in localStorage
         localStorage.setItem('userId', createdUser.id);
-        localStorage.setItem('userName', createdUser.name); // optional
+        localStorage.setItem('userName', createdUser.username); // optional
         localStorage.setItem('userEmail', createdUser.email); // optional
   
         const defaultProfile = {
           id: createdUser.id,
-          name: createdUser.name,
+          name: createdUser.username,
           email: createdUser.email,
           role: '',
           location: '',

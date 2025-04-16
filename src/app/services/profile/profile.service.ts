@@ -21,7 +21,7 @@ export class ProfileService {
   constructor(private http: HttpClient) {}
 
   getProfileByUserId(userId: string): Observable<any> {
-    return this.http.get(`${this.profileApiUrl}?userId=${userId}`)
+    return this.http.get(`${this.profileApiUrl}?id=${userId}`)
 
   }
   
