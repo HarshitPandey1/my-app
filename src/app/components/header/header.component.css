@@ -138,3 +138,16 @@
     height: auto;
   }
 }
+.straight-bar{
+  margin-left: 24px;
+  height: 55px;
+  width: 2px;
+  background-color: #B22222;
+}
+.profile-image-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+{
+    "name": "mock-servers",
+    "version": "1.0.0",
+    "description": "",
+    "main": "start-servers.js",
+    "scripts": {
+        "start:all": "concurrently \"json-server --watch db.json --port 3000\" \"json-server --watch bus.json --port 3001\" \"json-server --watch profile.json --port 3002\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.0.0",
+        "json-server": "^1.0.0-beta.3"
+    },
+    "dependencies": {
+        "mock-servers": "file:"
+    }
+}

@@ -14,4 +14,11 @@ export class ContactFormService {
   saveContact(data: any): Observable<any> {
     return this.http.post(this.baseUrl, data);
   }
+  getContacts(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseUrl);
+  }
+
+  deleteContact(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`);
+  }
 }

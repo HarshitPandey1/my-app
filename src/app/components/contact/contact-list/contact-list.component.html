@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<div class="contact-container">
+    <h2>User Queries</h2>
+  
+    <div *ngIf="contacts.length === 0" class="empty-msg">
+      No user queries available.
+    </div>
+  
+    <div *ngFor="let contact of contacts" class="contact-card">
+      <div class="contact-info">
+        <h3>{{ contact.name }}</h3>
+        <p>Email: {{ contact.email }}</p>
+        <p>Message: {{ contact.message }}</p>
+      </div>
+      <button class="delete-btn" (click)="deleteContact(contact.id)">Done!</button>
+    </div>
+  
+    <button class="back-to-top" (click)="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+  </div>
+  

@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-offers-slider-card',
-  imports: [DatePipe,JsonPipe],
+  imports: [DatePipe],
   templateUrl: './offers-slider-card.component.html',
   styleUrl: './offers-slider-card.component.css'
 })

@@ -46,7 +46,10 @@
             {{ registerError }}
             <a routerLink="/login">Click here to Login</a>
           </div>
-      
+          <div class="login-redirect">
+            Already have an account? <a routerLink="/login">Login</a>
+          </div>
+          
           <button type="submit" class="register-btn" [disabled]="registerForm.invalid">
             Register
             <span class="arrow" [class.animate-out]="isClicked">&#8594;</span>
