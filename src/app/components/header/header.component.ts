@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
     const userId = localStorage.getItem('userId');
 
     if (userId) {
-      this.http.get<any[]>(`http://localhost:3002/profile?userId=${userId}`).subscribe(profiles => {
+      this.http.get<any[]>(`http://localhost:3002/profile?id=${userId}`).subscribe(profiles => {
         if (profiles.length && profiles[0].photoUrl?.trim() !== '') {
           this.profilePhotoUrl = profiles[0].photoUrl;
         }

@@ -1,33 +1,71 @@
-<!-- Font Awesome CDN (if not already in index.html) -->
-<link
+<!-- Put this in the <head> of index.html -->
+  <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
 
-<div class="about-container">
-  <div class="about-card">
-    <h2><i class="fas fa-bus"></i> About BusBooking</h2>
-    <p class="subtitle">Your trusted travel companion</p>
+<div class="about-wrapper">
+  <button class="back-btn" routerLink="/home">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
 
-    <p>
-      Welcome to <strong>BusBooking</strong> – your one-stop platform for booking bus tickets with ease and convenience. 
-      Whether you're heading home or planning an adventure, we help make your journey seamless.
-    </p>
-
-    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-    <p>
-      To provide fast, secure, and user-friendly ticketing for travelers across the country, 
-      ensuring comfort, reliability, and the best experience.
-    </p>
-
-    <h3><i class="fas fa-star"></i> Why Choose Us?</h3>
-    <ul>
-      <li><i class="fas fa-check-circle"></i> Instant seat booking</li>
-      <li><i class="fas fa-check-circle"></i> Real-time bus tracking</li>
-      <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
-      <li><i class="fas fa-check-circle"></i> Easy cancellations and refunds</li>
-    </ul>
-
-    <p class="thankyou"><i class="fas fa-heart"></i> Thank you for choosing us!</p>
+  <div class="about-header">
+    <h1><i class="fas fa-bus"></i> BusBooking</h1>
+    <p>Your trusted travel companion</p>
   </div>
+
+  <div class="about-main">
+    <div class="about-section about-left">
+      <h2><i class="fas fa-info-circle"></i> About Us</h2>
+      <p>
+        Welcome to <strong>BusBooking</strong> – your one-stop platform for hassle-free bus ticket booking. 
+        We connect over 300+ cities with 12,000+ daily rides, offering unmatched convenience and safety.
+      </p>
+
+      <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
+      <p>
+        Empower travelers across the country with fast, secure, and accessible travel solutions.
+      </p>
+    </div>
+
+    <div class="about-section about-right">
+      <h2><i class="fas fa-star"></i> Why Choose Us?</h2>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Instant seat booking</li>
+        <li><i class="fas fa-check-circle"></i> Real-time bus tracking</li>
+        <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+        <li><i class="fas fa-check-circle"></i> Easy cancellations & refunds</li>
+      </ul>
+
+      <div class="stats">
+        <button (click)="showStat('rides')"><i class="fas fa-road"></i> Daily Rides</button>
+        <button (click)="showStat('users')"><i class="fas fa-users"></i> Users</button>
+        <button (click)="showStat('cities')"><i class="fas fa-city"></i> Cities Covered</button>
+
+        <div *ngIf="currentStat" class="popup-stat">
+          <i class="fas fa-chart-bar"></i> {{ currentStat }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-footer">
+    <p (click)="toggleLove()" [class.clicked]="loved">
+      <i class="fas fa-heart"></i> Thank you for choosing us!
+      <span class="emoji" *ngIf="loved">🥰</span>
+    </p>
+  </div>
+  <div class="animated-bus">
+    <i class="fas fa-bus"></i>
+  </div>
+  <!-- Animated buses -->
+<div class="animated-buses">
+  <div class="bus bus-1"><i class="fas fa-bus"></i></div>
+  <div class="bus bus-2"><i class="fas fa-bus"></i></div>
+  <div class="bus bus-3"><i class="fas fa-bus"></i></div>
+</div>
+
+<!-- Bus Honk Sound -->
+<audio id="busHonk" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
 </div>

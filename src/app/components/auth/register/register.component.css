@@ -116,3 +116,22 @@ body {
     text-decoration: underline;
   }
   
+  .login-redirect {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .login-redirect a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4px;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .login-redirect a:hover {
+    text-decoration: underline;
+  }
+  

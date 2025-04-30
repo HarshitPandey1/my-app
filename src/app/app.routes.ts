@@ -11,6 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about/about.component';
 import { AvailableBusComponent } from './components/available-bus/available-bus.component';
 import { ContactListComponent } from './components/contact/contact-list/contact-list.component';
+import { ToDoComponent } from './components/to-do/to-do.component';
 export const routes: Routes = [
     {
         path: 'header', component: HeaderComponent
@@ -44,6 +45,9 @@ export const routes: Routes = [
     },
     {
         path:'contact-list',component:ContactListComponent
+    },
+    {
+        path:'to-do',component:ToDoComponent
     },
     {
         path: '', component: RegisterComponent
